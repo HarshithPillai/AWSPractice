@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="book-service/.mvn/wrapper"/>
+	<classpathentry kind="src" path="book-service/src/main/java"/>
+	<classpathentry kind="src" path="book-service/src/test/java"/>
+	<classpathentry kind="lib" path="book-service/target/BookService.jar"/>
+	<classpathentry kind="output" path="book-service/target/classes"/>
+</classpath>
