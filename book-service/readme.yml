@@ -1,0 +1,23 @@
+
+
+version: 0.2
+
+phases:
+    install:
+        runtime-versions:
+            java: corretto8
+            docker: 18
+    pre_build:
+        commands:
+            - echo "Pre_build"
+    build:
+        commands:
+            - echo "Build"
+            - cd book-service
+            - mvn clean install
+    post_build:
+        commands:
+            - echo "Post_build"
+artifacts:
+    files:
+        target/BookService.jar
