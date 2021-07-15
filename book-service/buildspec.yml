@@ -17,14 +17,14 @@ phases:
       - echo "Building Java"
       - cd  book-service
       - mvn clean package
-      - docker build -t ij026-demo-service-registry:latest .
-      - docker tag ij026-demo-service-registry:latest 941516478045.dkr.ecr.us-east-2.amazonaws.com/ij026-demo-service-registry:booksapp
+      - docker build -t ij026-harshith-service-registry:latest .
+      - docker tag ij026-harshith-service-registry:latest 941516478045.dkr.ecr.us-east-2.amazonaws.com/ij026-harshith-service-registry:booksapp
                                                       
   post_build:
     commands:
       - echo "Post_build"
-      - docker push 941516478045.dkr.ecr.us-east-2.amazonaws.com/ij026-demo-service-registry:booksapp
-      - printf '[{"name":"booksapp-container","imageUri":"%s"}]' 941516478045.dkr.ecr.us-east-2.amazonaws.com/ij026-demo-service-registry:booksapp > taskdefinition.json
+      - docker push 941516478045.dkr.ecr.us-east-2.amazonaws.com/ij026-harshith-service-registry:booksapp
+      - printf '[{"name":"booksapp-container","imageUri":"%s"}]' 941516478045.dkr.ecr.us-east-2.amazonaws.com/ij026-harshith-service-registry:booksapp > taskdefinition.json
       - cat taskdefinition.json
 
 artifacts:
